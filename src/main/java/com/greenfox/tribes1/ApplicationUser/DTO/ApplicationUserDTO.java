@@ -1,5 +1,6 @@
 package com.greenfox.tribes1.ApplicationUser.DTO;
 
+import com.greenfox.tribes1.Validator.NoSpecialCharacters;
 import lombok.*;
 import javax.validation.constraints.NotBlank;
 
@@ -11,6 +12,7 @@ import javax.validation.constraints.NotBlank;
 public class ApplicationUserDTO {
 
   @NotBlank
+  @NoSpecialCharacters
   private String username;
   @NotBlank
   private String password;

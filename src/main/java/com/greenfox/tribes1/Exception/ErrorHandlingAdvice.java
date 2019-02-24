@@ -22,7 +22,7 @@ public class ErrorHandlingAdvice {
     for (FieldError fieldError : ex.getBindingResult().getFieldErrors()) {
       errors.put(fieldError.getField(), fieldError.getDefaultMessage());
     }
-    return new ErrorMsg("error", "Missing parameter(s): " + errors);
+    return new ErrorMsg("error", "Parameter(s) error: " + errors);
   }
 
   @ResponseBody
